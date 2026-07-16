@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Royal Capital — Pakistan's Premium Investment Platform. Earn guaranteed daily profits with 15+ investment plans. Start investing today and grow your wealth.">
+    <meta name="keywords" content="investment, daily profit, royal capital, earn money, trading, investment plans">
+    <meta name="author" content="Royal Capital">
+    <meta name="theme-color" content="#0a0a1a">
+
+    <title>Royal Capital — Premium Investment Plans | Earn Daily Profits</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lottie Player CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== PRELOADER ===================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            <div class="preloader-ring"></div>
+            <span class="preloader-icon">👑</span>
+        </div>
+        <div class="preloader-brand">ROYAL CAPITAL</div>
+        <div class="preloader-bar">
+            <div class="preloader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">👑</div>
+                <span class="logo-text">Royal Capital</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#referral">Referral</a></li>
+                <li><a href="#payment">Payment</a></li>
+            </ul>
+
+            <a href="#plans" class="nav-cta">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#home">🏠 Home</a>
+        <a href="#plans">📊 Investment Plans</a>
+        <a href="#features">⚡ Features</a>
+        <a href="#referral">🎁 Referral Bonus</a>
+        <a href="#payment">💳 Payment</a>
+    </div>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="home">
+        <!-- Gradient Orbs -->
+        <div class="hero-gradient-orb orb-1"></div>
+        <div class="hero-gradient-orb orb-2"></div>
+        <div class="hero-gradient-orb orb-3"></div>
+
+        <div class="hero-content">
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <span class="hero-badge">🏆 Pakistan's #1 Investment Platform</span>
+                <h1>
+                    Invest Smart.<br>
+                    <span class="gradient-text">Earn Daily.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Start earning guaranteed daily profits with our premium investment plans.
+                    Choose from 15 curated plans and watch your wealth grow every single day.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">
+                            <span data-counter="15000" data-suffix="+">0</span>
+                        </div>
+                        <div class="hero-stat-label">Active Investors</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">
+                            <span data-counter="50" data-suffix="M+">0</span>
+                        </div>
+                        <div class="hero-stat-label">Total Invested</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">
+                            <span data-counter="99" data-suffix="%">0</span>
+                        </div>
+                        <div class="hero-stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="#plans" class="btn-primary">
+                        View Plans ✨
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+                <div class="hero-3d-scene">
+                    <!-- Particle Canvas -->
+                    <canvas id="particle-canvas"></canvas>
+
+                    <!-- Glow Ring -->
+                    <div class="hero-glow-ring"></div>
+
+                    <!-- Main Floating Dashboard Card -->
+                    <div class="hero-main-card">
+                        <div class="hero-card-header">
+                            <span class="hero-card-title">Portfolio Growth</span>
+                            <span class="hero-card-growth">+24.7%</span>
+                        </div>
+                        <div class="hero-chart">
+                            <div class="hero-chart-bar" style="height: 35%;"></div>
+                            <div class="hero-chart-bar" style="height: 55%;"></div>
+                            <div class="hero-chart-bar" style="height: 42%;"></div>
+                            <div class="hero-chart-bar" style="height: 78%;"></div>
+                            <div class="hero-chart-bar" style="height: 62%;"></div>
+                            <div class="hero-chart-bar" style="height: 90%;"></div>
+                            <div class="hero-chart-bar" style="height: 75%;"></div>
+                        </div>
+                        <div class="hero-card-amount">
+                            <span class="gradient-text">RS 46,748</span>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);"> / day</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Info Cards -->
+                    <div class="hero-floating hero-floating-1">
+                        <span class="fl-icon">📈</span>
+                        <span class="fl-value">+RS 73/day</span>
+                        <span class="fl-label">Starting From</span>
+                    </div>
+
+                    <div class="hero-floating hero-floating-2">
+                        <span class="fl-icon">💰</span>
+                        <span class="fl-value">1,856% ROI</span>
+                        <span class="fl-label">Total Returns</span>
+                    </div>
+
+                    <div class="hero-floating hero-floating-3">
+                        <span class="fl-icon">⚡</span>
+                        <span class="fl-value">75 Days</span>
+                        <span class="fl-label">Plan Duration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INVESTMENT PLANS SECTION ===================== -->
+    <section class="plans-section section-padding" id="plans">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">💎 Investment Plans</span>
+                <h2>Choose Your <span class="gradient-text">Investment Plan</span></h2>
+                <p>Select from 15 premium plans designed for every budget. All plans offer daily profits for 75 days.</p>
+            </div>
+
+            <!-- Tier Filter Tabs -->
+            <div class="tier-tabs reveal">
+                <button class="tier-tab active" data-tier="all">All Plans</button>
+                <button class="tier-tab" data-tier="bronze">🥉 Bronze</button>
+                <button class="tier-tab" data-tier="silver">🥈 Silver</button>
+                <button class="tier-tab" data-tier="gold">🥇 Gold</button>
+                <button class="tier-tab" data-tier="platinum">💎 Platinum</button>
+            </div>
+
+            <!-- Plans Grid (Generated by JS) -->
+            <div class="plans-grid" id="plans-grid">
+                <!-- Cards are dynamically generated by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURES SECTION ===================== -->
+    <section class="features-section section-padding" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">⚡ Why Choose Us</span>
+                <h2>Premium <span class="gradient-text">Features</span></h2>
+                <p>Experience the most secure and rewarding investment platform in Pakistan.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal reveal-delay-1">
+                    <div class="feature-icon">💰</div>
+                    <h3>Daily Profits</h3>
+                    <p>Receive guaranteed daily profits directly to your account. No waiting, no delays — earn every single day.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-2">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Secure</h3>
+                    <p>Your investments are protected with bank-grade security. We ensure complete transparency and trust.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-3">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Withdrawal</h3>
+                    <p>Withdraw your profits instantly via JazzCash or Easypaisa. Fast, reliable, and hassle-free.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-4">
+                    <div class="feature-icon">🎧</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available round the clock to assist you with any questions or issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== REFERRAL BONUS SECTION ===================== -->
+    <section class="referral-section section-padding" id="referral">
+        <div class="container">
+            <div class="referral-card reveal">
+                <span class="section-badge">🎁 Referral Program</span>
+                <h2>Invite Friends &<br><span class="gradient-text">Earn Bonus</span></h2>
+                <p>Share your referral link and earn commission on every investment your referrals make.</p>
+
+                <div class="referral-levels">
+                    <div class="referral-level">
+                        <div class="level-badge">⭐ Level 1</div>
+                        <div class="level-percent">14%</div>
+                        <div class="level-label">Direct Referral Bonus</div>
+                    </div>
+                    <div class="referral-level">
+                        <div class="level-badge">🌟 Level 2</div>
+                        <div class="level-percent">3%</div>
+                        <div class="level-label">Indirect Referral Bonus</div>
+                    </div>
+                </div>
+
+                <div class="referral-cta">
+                    <a href="#" class="btn-primary">
+                        Start Earning Now 🚀
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PAYMENT METHODS SECTION ===================== -->
+    <section class="payment-section section-padding" id="payment">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">💳 Payment Methods</span>
+                <h2>Easy & Secure <span class="gradient-text">Payments</span></h2>
+                <p>Deposit and withdraw using Pakistan's most trusted payment platforms.</p>
+            </div>
+
+            <div class="payment-grid reveal">
+                <div class="payment-card">
+                    <div class="payment-logo">Jazz<br>Cash</div>
+                    <h4>JazzCash</h4>
+                    <p>Instant deposits & withdrawals</p>
+                </div>
+                <div class="payment-card">
+                    <div class="payment-logo">Easy<br>paisa</div>
+                    <h4>Easypaisa</h4>
+                    <p>Fast & reliable transactions</p>
+                </div>
+            </div>
+
+            <div class="payment-secure reveal">
+                <span class="secure-icon">🔒</span>
+                <span>All transactions are encrypted and 100% secure</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">👑</div>
+                        <span class="footer-logo-text">Royal Capital</span>
+                    </div>
+                    <p>Pakistan's leading investment platform offering guaranteed daily profits with secure and transparent investment plans.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="YouTube">🎬</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#plans">Investment Plans</a>
+                    <a href="#features">Features</a>
+                    <a href="#referral">Referral Program</a>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Live Chat</a>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Risk Disclosure</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Royal Capital. All rights reserved.</p>
+                <span class="footer-tagline">اپنی سرمایہ کاری کریں 💰</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== BACK TO TOP ===================== -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
