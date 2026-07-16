@@ -5,21 +5,13 @@
 
 // ===== INVESTMENT PLANS DATA =====
 const investmentPlans = [
-    { id: 1,  investment: 295,    dailyProfit: 73,    totalProfit: 5475,    duration: 75, tier: 'bronze' },
-    { id: 2,  investment: 895,    dailyProfit: 223,   totalProfit: 16725,   duration: 75, tier: 'bronze' },
-    { id: 3,  investment: 1695,   dailyProfit: 423,   totalProfit: 31725,   duration: 75, tier: 'bronze' },
-    { id: 4,  investment: 2795,   dailyProfit: 698,   totalProfit: 52350,   duration: 75, tier: 'bronze' },
-    { id: 5,  investment: 4395,   dailyProfit: 1098,  totalProfit: 82350,   duration: 75, tier: 'silver' },
-    { id: 6,  investment: 7295,   dailyProfit: 1823,  totalProfit: 136725,  duration: 75, tier: 'silver' },
-    { id: 7,  investment: 9795,   dailyProfit: 2448,  totalProfit: 183600,  duration: 75, tier: 'silver' },
-    { id: 8,  investment: 14995,  dailyProfit: 3748,  totalProfit: 281100,  duration: 75, tier: 'silver' },
-    { id: 9,  investment: 23995,  dailyProfit: 5998,  totalProfit: 449850,  duration: 75, tier: 'gold' },
-    { id: 10, investment: 34995,  dailyProfit: 8748,  totalProfit: 656100,  duration: 75, tier: 'gold' },
-    { id: 11, investment: 46995,  dailyProfit: 11748, totalProfit: 881100,  duration: 75, tier: 'gold' },
-    { id: 12, investment: 63695,  dailyProfit: 15998, totalProfit: 1199850, duration: 75, tier: 'gold' },
-    { id: 13, investment: 86995,  dailyProfit: 21748, totalProfit: 1631100, duration: 75, tier: 'platinum' },
-    { id: 14, investment: 117995, dailyProfit: 29498, totalProfit: 2212350, duration: 75, tier: 'platinum' },
-    { id: 15, investment: 186995, dailyProfit: 46748, totalProfit: 3506100, duration: 75, tier: 'platinum' },
+    { id: 1,  name: 'Plan 1', investment: 3000,   dailyProfit: 100,  totalProfit: 7500,   duration: 75, tier: 'bronze',   isComingSoon: false },
+    { id: 2,  name: 'Plan 2', investment: 9000,   dailyProfit: 300,  totalProfit: 22500,  duration: 75, tier: 'silver',   isComingSoon: false },
+    { id: 3,  name: 'Plan 3', investment: 30000,  dailyProfit: 1000, totalProfit: 75000,  duration: 75, tier: 'gold',     isComingSoon: false },
+    { id: 4,  name: 'Plan 4', investment: 72800,  dailyProfit: 2800, totalProfit: 210000, duration: 75, tier: 'platinum', isComingSoon: false },
+    { id: 5,  name: 'Plan 5', investment: 0,      dailyProfit: 0,    totalProfit: 0,      duration: 0,  tier: 'platinum', isComingSoon: true },
+    { id: 6,  name: 'Plan 6', investment: 0,      dailyProfit: 0,    totalProfit: 0,      duration: 0,  tier: 'platinum', isComingSoon: true },
+    { id: 7,  name: 'Plan 7', investment: 0,      dailyProfit: 0,    totalProfit: 0,      duration: 0,  tier: 'platinum', isComingSoon: true },
 ];
 
 const tierConfig = {
@@ -166,50 +158,77 @@ function generatePlanCards(filterTier = 'all') {
         card.className = `plan-card ${plan.tier} reveal`;
         card.style.transitionDelay = `${index * 0.06}s`;
 
-        card.innerHTML = `
-            <div class="card-accent"></div>
-            <div class="card-inner">
-                <div class="card-tier-badge">
-                    <span class="badge-dot"></span>
-                    <span>${tier.icon} ${tier.label}</span>
-                </div>
-                <div class="card-amount">
-                    <span class="currency">RS</span>
-                    <span class="amount">${formatNumber(plan.investment)}</span>
-                </div>
-                <div class="card-roi">
-                    <span class="roi-arrow">▲</span>
-                    <span class="roi-value">${roi}%</span>
-                    <span class="roi-label">ROI</span>
-                </div>
-                <div class="card-stats">
-                    <div class="stat-row">
-                        <div class="stat-icon daily">📈</div>
-                        <div class="stat-info">
-                            <span class="stat-label">Daily Profit</span>
-                            <span class="stat-value">RS ${formatNumber(plan.dailyProfit)}</span>
+        if (plan.isComingSoon) {
+            card.innerHTML = `
+                <div class="card-accent"></div>
+                <div class="card-inner" style="opacity: 0.7;">
+                    <div class="card-tier-badge">
+                        <span class="badge-dot"></span>
+                        <span>${plan.name}</span>
+                    </div>
+                    <div class="card-amount">
+                        <span class="amount" style="font-size: 2rem; margin-top: 20px;">Coming Soon</span>
+                    </div>
+                    <div class="card-stats" style="margin-top: 40px; filter: blur(2px);">
+                        <div class="stat-row">
+                            <div class="stat-icon daily">📈</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Daily Profit</span>
+                                <span class="stat-value">???</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="stat-row">
-                        <div class="stat-icon total">💰</div>
-                        <div class="stat-info">
-                            <span class="stat-label">Total Profit</span>
-                            <span class="stat-value">RS ${formatNumber(plan.totalProfit)}</span>
-                        </div>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-icon duration">📅</div>
-                        <div class="stat-info">
-                            <span class="stat-label">Duration</span>
-                            <span class="stat-value">${plan.duration} Days</span>
-                        </div>
-                    </div>
+                    <button class="invest-btn" disabled style="background: rgba(255,255,255,0.1); cursor: not-allowed; color: #888;">
+                        COMING SOON ⏳
+                    </button>
                 </div>
-                <button class="invest-btn" onclick="handleInvest(${plan.id})">
-                    INVEST NOW ${tier.emoji}
-                </button>
-            </div>
-        `;
+            `;
+        } else {
+            card.innerHTML = `
+                <div class="card-accent"></div>
+                <div class="card-inner">
+                    <div class="card-tier-badge">
+                        <span class="badge-dot"></span>
+                        <span>${plan.name} (${tier.label})</span>
+                    </div>
+                    <div class="card-amount">
+                        <span class="currency">RS</span>
+                        <span class="amount">${formatNumber(plan.investment)}</span>
+                    </div>
+                    <div class="card-roi">
+                        <span class="roi-arrow">▲</span>
+                        <span class="roi-value">${roi}%</span>
+                        <span class="roi-label">ROI</span>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-row">
+                            <div class="stat-icon daily">📈</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Daily Profit</span>
+                                <span class="stat-value">RS ${formatNumber(plan.dailyProfit)}</span>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-icon total">💰</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Total Profit</span>
+                                <span class="stat-value">RS ${formatNumber(plan.totalProfit)}</span>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-icon duration">📅</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Duration</span>
+                                <span class="stat-value">${plan.duration} Days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="invest-btn" onclick="handleInvest(${plan.id})">
+                        INVEST NOW ${tier.emoji}
+                    </button>
+                </div>
+            `;
+        }
 
         grid.appendChild(card);
     });
